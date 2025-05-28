@@ -4,7 +4,7 @@
   "scope": "/",
   "name": "MyKisah App",
   "short_name": "MyKisah",
-  "description": "MyKisah is a web application that allows users to create and share their stories with the world. It provides a platform for users to express themselves, connect with others, and showcase their creativity.",
+  "description": "MyKisah,semua kisah layal untuk dikenang cihuuy.",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#14b8a6",
@@ -48,37 +48,37 @@
   ],
     "screenshots": [
     {
-      "src": "images/screenshots/CityCareApp_001.png",
+      "src": "images/screenshots/01.png",
       "sizes": "1920x1043",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "images/screenshots/CityCareApp_002.png",
+      "src": "images/screenshots/02.png",
       "sizes": "1920x1043",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "images/screenshots/CityCareApp_003.png",
+      "src": "images/screenshots/03.png",
       "sizes": "1920x1043",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "images/screenshots/CityCareApp_004.png",
+      "src": "images/screenshots/04.png",
       "sizes": "1080x2280",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "images/screenshots/CityCareApp_005.png",
+      "src": "images/screenshots/05.png",
       "sizes": "1080x2280",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "images/screenshots/CityCareApp_006.png",
+      "src": "images/screenshots/06.png",
       "sizes": "1080x2280",
       "type": "image/png",
       "form_factor": "narrow"

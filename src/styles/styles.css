@@ -520,8 +520,7 @@ header {
 /* NEW STORY FORM */
 .new-story__header {
   padding-block: 70px;
-  background-color: #d9770626;
-  background-image: url('../public/images/background.png');
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;

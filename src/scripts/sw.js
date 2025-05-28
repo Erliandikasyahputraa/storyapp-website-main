@@ -44,7 +44,7 @@ registerRoute(
     return baseUrl.origin === url.origin && request.destination !== 'image';
   },
   new NetworkFirst({
-    cacheName: 'citycare-api',
+    cacheName: 'MyKisah-api',
   }),
 );
 registerRoute(
@@ -53,7 +53,7 @@ registerRoute(
     return baseUrl.origin === url.origin && request.destination === 'image';
   },
   new StaleWhileRevalidate({
-    cacheName: 'citycare-api-images',
+    cacheName: 'MyKisah-api-images',
   }),
 );
 registerRoute(

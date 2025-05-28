@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await app.renderPage();
 
   await registerServiceWorker();
-  await requestNotificationPermission(); // ✅ Tambahkan ini
+  await requestNotificationPermission(); 
 
     // for demonstration purpose-only
   console.log('Berhasil mendaftarkan service worker.');
