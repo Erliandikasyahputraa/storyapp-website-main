@@ -9,18 +9,18 @@ export default class LoginPage {
     return `
       <section class="login-container">
         <article class="login-form-container">
-          <h1 class="login__title">Login</h1>
+          <h1 class="login__title">Masuk</h1>
 
           <form id="login-form" class="login-form">
             <div class="form-control">
-              <label for="email-input" class="login-form__email-title">Email <span style="color: red">*</span></label>
+              <label for="email-input" class="login-form__email-title">Email<span style="color: red">*</span></label>
 
               <div class="login-form__title-container">
                 <input id="email-input" type="email" name="email" placeholder="Contoh: nama@example.com">
               </div>
             </div>
             <div class="form-control">
-              <label for="password-input" class="login-form__password-title">Password <span style="color: red">*</span></label>
+              <label for="password-input" class="login-form__password-title">Kata Sandi<span style="color: red">*</span></label>
 
               <div class="login-form__title-container">
                 <input id="password-input" type="password" name="password" placeholder="Masukkan password Anda">
@@ -30,7 +30,7 @@ export default class LoginPage {
               <div id="submit-button-container">
                 <button class="btn" type="submit">Login</button>
               </div>
-              <p class="login-form__do-not-have-account">Belum punya akun? <a href="#/register"><b>Register</b></a></p>
+              <p class="login-form__do-not-have-account">Belum punya akun? <a href="#/register"><b>Daftar dulu sini</b></a></p>
             </div>
           </form>
         </article>

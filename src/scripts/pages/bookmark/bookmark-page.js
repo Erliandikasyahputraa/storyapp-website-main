@@ -13,7 +13,7 @@ export default class BookmarkPage {
   async render() {
     return `
       <section class="container">
-        <h1 class="section-title">Daftar Laporan Kerusakan Tersimpan</h1>
+        <h1 class="section-title">Daftar Kisah yang sudah kamu simpan</h1>
 
         <div class="reports-list__container">
           <div id="reports-list"></div>

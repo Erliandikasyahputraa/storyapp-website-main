@@ -12,24 +12,24 @@ export default class RegisterPage {
 
           <form id="register-form" class="register-form">
             <div class="form-control">
-              <label for="name-input" class="register-form__name-title">Nama lengkap <span style="color: red">*</span></label>
+              <label for="name-input" class="register-form__name-title">Username<span style="color: red">*</span></label>
 
               <div class="register-form__title-container">
-                <input id="name-input" type="text" name="name" placeholder="Masukkan nama lengkap Anda">
+                <input id="name-input" type="text" name="name" placeholder="Masukkan nama lengkap / Username">
               </div>
             </div>
             <div class="form-control">
-              <label for="email-input" class="register-form__email-title">Email <span style="color: red">*</span></label>
+              <label for="email-input" class="register-form__email-title">Email<span style="color: red">*</span></label>
 
               <div class="register-form__title-container">
                 <input id="email-input" type="email" name="email" placeholder="Contoh: nama@example.com">
               </div>
             </div>
             <div class="form-control">
-              <label for="password-input" class="register-form__password-title">Password <span style="color: red">*</span></label>
+              <label for="password-input" class="register-form__password-title">Kata Sandi <span style="color: red">*</span></label>
 
               <div class="register-form__title-container">
-                <input id="password-input" type="password" name="password" placeholder="Masukkan password baru">
+                <input id="password-input" type="password" name="password" placeholder="Masukkan password untuk akunmu">
               </div>
             </div>
             <div class="form-buttons register-form__form-buttons">

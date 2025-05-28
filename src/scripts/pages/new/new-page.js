@@ -17,9 +17,9 @@ export default class NewPage {
       <section>
         <div class="new-story__header">
           <div class="container">
-            <h1 class="new-story__header__title">Publikasi Cerita Anda!</h1>
+            <h1 class="new-story__header__title">Pamerkan kisah kamu!</h1>
             <p class="new-story__header__description">
-              Silakan lengkapi formulir di bawah untuk membuat cerita baru.<br>
+              Silakan lengkapi formulir di bawah untuk melihatkan kisah anda.<br>
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default class NewPage {
                 <textarea
                   id="description-input"
                   name="description"
-                  placeholder="Ceritakan detail pengalamanmu di sini... Mulai dari tempat, waktu, sampai apa yang bikin ceritamu spesial!"
+                  placeholder="Ceritakan detail kisahmu di sini bro, Mulai dari tempat, waktu, sampai apa yang bikin kisahmu layak untuk dikenang!"
                 ></textarea>
               </div>
             </div>
@@ -290,14 +290,14 @@ export default class NewPage {
   showSubmitLoadingButton() {
     document.getElementById('submit-button-container').innerHTML = `
       <button class="btn" type="submit" disabled>
-        <i class="fas fa-spinner loader-button"></i> Buat Cerita
+        <i class="fas fa-spinner loader-button"></i> Buat kisah
       </button>
     `;
   }
 
   hideSubmitLoadingButton() {
     document.getElementById('submit-button-container').innerHTML = `
-      <button class="btn" type="submit">Buat Cerita</button>
+      <button class="btn" type="submit">Buat kisah</button>
     `;
   }
 }

@@ -25,7 +25,7 @@ export default class HomePage {
       </section>
 
       <section class="container">
-        <h1 class="section-title">Daftar Cerita</h1>
+        <h1 class="section-title">Daftar Kisah</h1>
 
         <div class="stories-list__container">
           <div id="stories-list"></div>
@@ -148,7 +148,7 @@ export default class HomePage {
             this.addSaveButtonListeners(stories); // Reattach listeners
           } catch (error) {
             console.error('Error saving report:', error);
-            alert('Gagal menyimpan laporan!');
+            alert('Gagal menyimpan kisah!');
           }
         });
       }
@@ -162,7 +162,7 @@ export default class HomePage {
             this.addSaveButtonListeners(stories); // Reattach listeners
           } catch (error) {
             console.error('Error removing report:', error);
-            alert('Gagal menghapus laporan!');
+            alert('Gagal menghapus kisah!');
           }
         });
       }

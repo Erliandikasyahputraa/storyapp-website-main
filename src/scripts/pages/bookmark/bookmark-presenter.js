@@ -14,8 +14,8 @@ export default class BookmarkPresenter {
       const reports = await this.#model.getAllReports();
       this.#view.populateBookmarkedReports(null, reports);
     } catch (error) {
-      console.error('Error fetching bookmarked reports:', error);
-      this.#view.populateBookmarkedReportsError('Gagal memuat laporan tersimpan.');
+      console.error('Error fetching bookmarked story:', error);
+      this.#view.populateBookmarkedReportsError('Gagal memuat Kisah yang tersimpan.');
     } finally {
       this.#view.hideReportsListLoading();
     }

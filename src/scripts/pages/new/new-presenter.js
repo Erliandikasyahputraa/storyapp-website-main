@@ -52,15 +52,15 @@ export default class NewPresenter {
             console.log('Sent story_created message to service worker');
           } else {
             console.warn('Service worker not active');
-            alert(`Story berhasil dibuat: ${description}`);
+            alert(`Kisah berhasil dibuat: ${description}`);
           }
         } catch (error) {
           console.error('Error sending message to service worker:', error);
-          alert(`Story berhasil dibuat: ${description}`);
+          alert(`Kisah berhasil dibuat: ${description}`);
         }
       } else {
         // Fallback ke alert jika notifikasi tidak tersedia atau pengguna sudah berlangganan
-        alert(`Story berhasil dibuat: ${description}`);
+        alert(`Kisah berhasil dibuat: ${description}`);
       }
 
       this.#view.storeSuccessfully(response.message, response.data);
