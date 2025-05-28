@@ -3,6 +3,7 @@ import LoginPage from '../pages/auth/login/login-page';
 import HomePage from '../pages/home/home-page';
 import BookmarkPage from '../pages/bookmark/bookmark-page';
 import NewPage from '../pages/new/new-page';
+import NotFoundPage from '../pages/404-page';
 import { checkAuthenticatedRoute, checkUnauthenticatedRouteOnly } from '../utils/auth';
 
 export const routes = {
@@ -11,4 +12,5 @@ export const routes = {
   '/': () => checkAuthenticatedRoute(new HomePage()),
   '/new': () => checkAuthenticatedRoute(new NewPage()),
   '/bookmark': () => checkAuthenticatedRoute(new BookmarkPage()),
+  '*': () => new NotFoundPage(), // 
 };
