@@ -3,11 +3,11 @@ import { registerRoute } from 'workbox-routing';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 import { NetworkFirst, CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
 import { BASE_URL } from './config';
- 
+
 // Do precaching
 const manifest = self.__WB_MANIFEST;
 precacheAndRoute(manifest);
- 
+
 // Runtime caching
 registerRoute(
   ({ url }) => {
@@ -68,36 +68,64 @@ registerRoute(
 self.addEventListener('push', (event) => {
   console.log('Service worker pushing...');
 
+  // Deklarasikan notificationData di scope yang lebih luas (di luar try-catch)
+  // dan berikan nilai default atau pastikan diinisialisasi sebelum digunakan
+  let notificationData = {
+    title: 'Notifikasi Default', // Default title
+    options: {
+      body: 'Pesan notifikasi default', // Default body
+    },
+  };
+
   async function chainPromise() {
     if (event.data) {
       try {
         const data = event.data.json();
         if (data.type === 'story_created') {
           notificationData = {
-            title: 'kisah berhasil dibuat',
+            title: 'Kisah berhasil dibuat', // Perhatikan kapitalisasi 'Kisah'
             options: {
               body: `Anda telah membuat kisah baru dengan deskripsi: ${data.description}`,
+            },
+          };
+        } else {
+          // Handle other notification types or set a generic notification
+          notificationData = {
+            title: 'Notifikasi Baru',
+            options: {
+              body: 'Anda memiliki notifikasi baru.',
             },
           };
         }
       } catch (error) {
         console.error('Error parsing push event data:', error);
+        // Fallback notification if parsing fails
+        notificationData = {
+          title: 'Error Notifikasi',
+          options: {
+            body: 'Gagal memproses notifikasi.',
+          },
+        };
       }
     }
 
-    await self.registration.showNotification(notificationData.title, notificationData.options);
+    // Pastikan showNotification dipanggil setelah notificationData diinisialisasi
+    await self.registration.showNotification(notificationData.title, notificationData.options)
+      .catch((error) => {
+        console.error('Error showing push notification:', error);
+      });
   }
 
   event.waitUntil(chainPromise());
 });
 
-// Menangani pesan dari postMessage
+// Menangani pesan dari postMessage (Tidak ada perubahan signifikan yang diperlukan di sini)
 self.addEventListener('message', (event) => {
   console.log('Service worker received message:', event.data);
 
   if (event.data && event.data.type === 'story_created') {
     const notificationData = {
-      title: 'kisah berhasil dibuat',
+      title: 'Kisah berhasil dibuat', // Perhatikan kapitalisasi 'Kisah'
       options: {
         body: `Anda telah membuat kisah baru dengan deskripsi: ${event.data.description}`,
       },
